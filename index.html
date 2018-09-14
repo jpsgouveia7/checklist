@@ -1,0 +1,198 @@
+
+<html>
+<head>
+  <meta charset="UTF8" >
+  <title>CheckList - Tests</title>
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+</head>
+<style>
+
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+body{
+  padding: 10px;
+}
+
+label{
+  position: relative;
+  cursor: pointer;
+  color: #666;
+  font-size: 15px;
+}
+
+input[type="checkbox"]{
+  position: absolute;
+  right: 9000px;
+}
+
+/*Check box*/
+input[type="checkbox"] + .label-text:before{
+  content: "\f096";
+  font-family: "FontAwesome";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing:antialiased;
+  width: 1em;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+input[type="checkbox"]:checked + .label-text:before{
+  content: "\f14a";
+  color: #2980b9;
+  animation: effect 250ms ease-in;
+}
+
+input[type="checkbox"]:disabled + .label-text{
+  color: #aaa;
+}
+
+input[type="checkbox"]:disabled + .label-text:before{
+  content: "\f0c8";
+  color: #ccc;
+}
+
+}
+
+
+@keyframes effect{
+  0%{transform: scale(0);}
+  25%{transform: scale(1.3);}
+  75%{transform: scale(1.4);}
+  100%{transform: scale(1);}
+}
+
+</style>
+
+<body>
+  <img src="https://news.bitcoin.com/wp-content/uploads/2018/06/880593_media_512x512-300x300.png" style="width:104px;height:142px;">
+  <fieldset>
+  <legend><h1>Check List</h1></legend>
+      <h3>
+      <i><u>Tests</u></i>
+      </h3>
+      <h4>
+      <n>Work tests:</n>
+      </h4>  
+ <div class="container">
+<div class="col-md-4">
+      <form name="f1">
+      <div>
+        <label>
+          <h4>
+            <input type="checkbox" name="check" checked> <span class="label-text">1. Backups</span>
+        </h4>
+        </label>
+      </div>
+      <div>
+        <label>
+          <h4>
+            <input type="checkbox" name="check" checked> <span class="label-text"> 2. stop service</span>
+          </h4>
+        </label>
+      </div>
+        <h2>3.Import Metamodel:</h2>
+          <h6>
+            <p>Launcher Tests</p>
+          </h6>
+        <div class="form-check">
+          <label>
+            <h6>
+              <input type="checkbox" name="check" checked> <span class="label-text">Scripts, Fundamental Framework and Versions</span>
+            </h6>
+          </label>
+        </div>
+        <div class="form-check">
+          <label>
+            <h6>
+              <input type="checkbox" name="check"> <span class="label-text">Importing Base Tables</span>
+            </h6>
+          </label>
+        </div>
+        <div class="form-check">
+          <label>
+            <h6>
+             <input type="checkbox" name="check"> <span class="label-text">Import of Geographic Areas</span>
+            </h6>
+          </label>
+        </div>
+        <div class="form-check">
+          <label>
+            <h6>
+              <input type="checkbox" name="check"> <span class="label-text">Import Reporting</span>
+            </h6>
+          </label>
+        </div>
+        <div class="form-check">
+          <label>
+            <h6>
+              <input type="checkbox" name="check"> <span class="label-text">Importing Translations</span>
+            </h6>
+          </label>
+        </div>
+        <div class="form-check">
+          <label>
+            <h6>
+              <input type="checkbox" name="check"> <span class="label-text">Importing Information</span> 
+          </label>
+            </h6>
+        </div>
+        <h6>
+            <p>Web version:</p>
+          </h6>
+        <div>
+        <label>
+          <h4>
+            <input type="checkbox" name="check" checked> <span class="label-text">4.Deploy to teamcity1</span>
+        </h4>
+        </label>
+      </div>
+      <h6>
+            <p>Outros:</p>
+          </h6>
+        <div>
+        <label>
+          <h4>
+            <input type="checkbox" name="check" checked> <span class="label-text">5.Replace executable files "dlls" in the folder</span>
+        </h4>
+        </label>
+      </div>
+      <div>
+        <label>
+          <h4>
+            <input type="checkbox" name="check" checked> <span class="label-text">6.start service"</span>
+        </h4>
+        </label>
+      </div>
+
+<a href="javascript:selecionar_todo()">Marcar todos</a> | 
+<a href="javascript:deselecionar_todo()">Desmarcar</a>
+
+      </form>
+      </div>
+</fieldset>
+
+<script>
+<!--
+function selecionar_todo(){ 
+   for (i=0;i<document.f1.elements.length;i++) 
+      if(document.f1.elements[i].type == "checkbox")  
+         document.f1.elements[i].checked=1 
+} 
+function deselecionar_todo(){ 
+   for (i=0;i<document.f1.elements.length;i++) 
+      if(document.f1.elements[i].type == "checkbox")  
+         document.f1.elements[i].checked=0 
+} 
+
+//-->
+</script>
+</body>
+</html>
